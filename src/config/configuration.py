@@ -1,0 +1,21 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class Configuration:
+    frame: int = 60
+    bg_color: list = (230, 230, 230)
+    screen_width: int = 1200
+    screen_height: int = 800
+
+    # imagen
+    imagen_ship: str = 'assets/ship.bmp'
+
+    # Ship
+    ship_speed = 1.5
+
+    # Bullet
+    bullet_speed = 2.0
+    bullet_width = 3
+    bullet_height = 15
+    bullet_color = (60, 60, 60)
