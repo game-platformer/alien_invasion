@@ -4,6 +4,7 @@ import pygame
 
 import alien.alien_invasion as Ai
 
+
 class Ship:
     def __init__(self, ai_game: Ai) -> None:
         self.screen = ai_game.screen
@@ -29,5 +30,10 @@ class Ship:
             self.x -= ship_speed
 
         self.rect.x = self.x
+
     def blitme(self):
         self.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
