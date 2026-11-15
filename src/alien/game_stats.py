@@ -5,8 +5,10 @@ class GameStats:
     def __init__(self, ai_game: Alien):
         self.config = ai_game.config
         self.ships_left = 0
+        self.score = 0
 
         self.reset_stats()
 
     def reset_stats(self):
         self.ships_left = self.config.ship_limit
+        self.score = 0
